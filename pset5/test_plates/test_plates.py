@@ -2,10 +2,12 @@ from plates import is_valid
 
 
 def test_order():
+    assert not is_valid("50666")
     assert is_valid("foo666")
     assert not is_valid("fo6oo")
     assert not is_valid("3bar")
     assert not is_valid("33bar")
+
 
 def test_length():
     assert not is_valid("f")
